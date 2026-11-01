@@ -41,6 +41,7 @@ configure_file(${TEMPLATE_FILE} ${OUTPUT_FILE})
 set(TARGET llama-common-base)
 add_library(${TARGET} STATIC ${OUTPUT_FILE})
 
+# . provides the static build-info.h used by build-info.cpp
 target_include_directories(${TARGET} PUBLIC .)
 
 if (BUILD_SHARED_LIBS)
@@ -74,7 +75,7 @@ add_library(${TARGET}
     download.cpp
     download.h
     features.cpp
-    features.h
+    ada-features.h
     fit.cpp
     fit.h
     hf-cache.cpp

@@ -4,7 +4,7 @@
 #include "chat.h"
 #include "common.h"
 #include "download.h"
-#include "features.h"
+#include "ada-features.h"
 #include "json-schema-to-grammar.h"
 #include "json.h"
 #include "llama.h"
