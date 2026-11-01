@@ -29,7 +29,7 @@ FROM ${BASE_CUDA_DEV_CONTAINER} AS build
 
 ARG GCC_VERSION
 # CUDA architecture to build for (defaults to 86,89 = Ampere + Ada)
-ARG CUDA_DOCKER_ARCH=86,89
+ARG CUDA_DOCKER_ARCH=86;89
 
 RUN apt-get update && \
     apt-get install -y gcc-${GCC_VERSION} g++-${GCC_VERSION} build-essential cmake python3 python3-pip git libssl-dev libgomp1
